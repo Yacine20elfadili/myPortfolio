@@ -1,0 +1,540 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #1a1a2e; /* Dark background */
+  color: #e0e0e0; /* Light text */
+}
+
+/* Sticky Header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: #0f3460; /* Dark blue */
+  padding: 10px 20px; /* Reduced padding for smaller height */
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  color: #e0e0e0;
+}
+
+.logo i {
+    background-color: #9d65c9;
+    padding: 8px; /* Slightly reduced padding */
+    border-radius: 50%;
+    font-size: 1.3rem; /* Reduced font size for a smaller icon */
+    margin-right: 8px;
+}
+
+.logo .logo-text {
+    font-size: 1.2rem; /* Reduced font size */
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.navlinks {
+  list-style-type: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.navlinks li a {
+  font-size: 1.4rem;
+  color: #e0e0e0;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navlinks li a:hover,
+.nav-link.active {
+  color: #9d65c9; /* Light purple */
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero-header {
+  width: 100%;
+  min-height: 100vh;
+  background: #16213e; /* Darker blue */
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+  animation: fadeIn 1.5s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hero-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid #9d65c9; /* Light purple */
+  box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s;
+}
+
+.hero-pic img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.hero-pic img:hover {
+  transform: scale(1.1);
+}
+
+.hero-text {
+  max-width: 600px;
+  text-align: left;
+  animation: slideIn 1s ease;
+}
+
+.hero-text h5 {
+  color: #9d65c9;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-text h5 .input {
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+.hero-text h1 {
+  color: #e0e0e0;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.social a {
+  color: #9d65c9;
+  font-size: 2rem;
+  margin-right: 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social a:hover {
+  color: #e0e0e0;
+  transform: scale(1.2);
+}
+
+/* About Section */
+#About {
+  background-color: #1a1a2e; /* Dark background */
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+#About h3 {
+  font-size: 2rem;
+  color: #9d65c9; /* Light purple */
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+#About p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Timeline for Education */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+  margin: 30px auto 0;
+}
+
+.timeline-item {
+  padding: 15px;
+  border-left: 2px solid #9d65c9; /* Light purple */
+  margin-bottom: 15px;
+  position: relative;
+  color: #e0e0e0;
+  animation: slideIn 1.2s ease;
+}
+
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #9d65c9;
+  border-radius: 50%;
+}
+
+/* Skills Section */
+#Skills {
+  background: #1e1e40;
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+#Skills h3 {
+  font-size: 2rem;
+  color: #9d65c9; /* Light purple */
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.skills {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill {
+  text-align: left;
+}
+
+.skill h4 {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+.progress {
+  background-color: #2f2f3b;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress-bar {
+  height: 15px;
+  background-color: #9d65c9;
+  transition: width 1s ease;
+  width: 0;
+}
+.progress-bar.html {
+  width: 85%;
+} /* Adjust classes accordingly */
+.progress-bar.css {
+  width: 55%;
+}
+.progress-bar.javascript {
+  width: 65%;
+}
+.progress-bar.python {
+  width: 80%;
+}
+.progress-bar.c {
+  width: 30%;
+}
+
+/* Projects Section */
+#Projects {
+  background-color: #1a1a2e;
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+#Projects h3 {
+  font-size: 2rem;
+  color: #9d65c9;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #2f2f3b;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h4 {
+  color: #9d65c9;
+  font-size: 1.2rem;
+  margin: 15px;
+}
+
+.project-card p {
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin: 0 15px 15px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin: 15px;
+  color: #9d65c9;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.project-card a:hover {
+  color: #e0e0e0;
+}
+
+/* Contact Section */
+#Contact {
+  background: #1e1e40;
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+#Contact h3 {
+  font-size: 2rem;
+  color: #9d65c9;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #2f2f3b;
+  border-radius: 5px;
+  background: #222;
+  color: #e0e0e0;
+}
+
+form button {
+  background-color: #9d65c9;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #7442c2;
+}
+
+/* Footer */
+footer {
+  background-color: #0f3460;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-links a {
+  color: #9d65c9;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #e0e0e0;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding: 20px 0;
+  }
+
+  .timeline {
+    max-width: 100%;
+  }
+
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+
+.togglebtn {
+  display: none; /* Only show this on smaller screens */
+}
+
+@media (max-width: 768px) {
+  .togglebtn {
+    display: block;
+    cursor: pointer;
+  }
+  .navlinks {
+    display: none;
+    flex-direction: column;
+  }
+  .navlinks.open {
+    display: flex;
+  }
+}
+form label {
+  font-weight: bold;
+  color: #9d65c9;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  font-size: 1.1rem;
+}
+
+/* Toggle button for smaller screens */
+nav .togglebtn {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 25px;
+  right: 3%;
+  z-index: 5;
+  cursor: pointer;
+  display: none;
+}
+
+nav .togglebtn span {
+  display: block;
+  background-color: #ffffff;
+  margin: 5px 0;
+  width: 100%;
+  height: 3px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Responsive design: Show toggle button on smaller screens */
+@media (max-width: 930px) {
+  nav .togglebtn {
+    display: initial;
+  }
+  nav .navlinks {
+    position: absolute;
+    top: 84px;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background-color: #222222ea;
+    z-index: 3;
+    box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.5s ease;
+  }
+  nav .navlinks li {
+    margin-bottom: 15px;
+  }
+  /* Glow effect for nav links on hover */
+  nav .navlinks li a {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: color 0.3s, text-shadow 0.3s;
+  }
+
+  nav .navlinks li a:hover {
+    color: #ffffff;
+    text-shadow: 10px 10px 20px #007ced, 0 0 30px #007ced, 0 0 40px #007ced;
+  }
+
+  nav .navlinks.open {
+    right: 0;
+  }
+  /* Toggle button animation when active */
+  .click span:first-child {
+    transform: rotate(45deg) translateY(7px);
+  }
+  .click span:nth-child(2) {
+    opacity: 0;
+  }
+  .click span:last-child {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+}

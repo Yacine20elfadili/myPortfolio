@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Yacine Elfadili - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+
+
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="logo">
+            <i class="fa-solid fa-m"></i>
+            <div class="logo-text">MedFadili</div>
+        </div>
+        <nav>
+            <div class="togglebtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navlinks">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <div class="hero-header" id="Home">
+        <div class="container">
+            <div class="hero-pic">
+                <img src="profile.jpg" alt="Profile Picture">
+            </div>
+            <div class="hero-text">
+                <h5>Hi, I'm <span class="input">Frontend Developer</span></h5>
+                <h1>Mohamed Yacine Elfadili</h1>
+                <p>Génie informatique (étudiant).</p>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/yacine-elfadili-a5185b314/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Yacine20elfadili" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/yacine5fadili/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="About">
+        <div class="about">
+            <h3>About Me</h3>
+
+            <p>Je m'appelle Mohamed Yacine Elfadili, un étudiant engagé en Génie Informatique à la Faculté
+                Polydisciplinaire de Taroudant. Actuellement en phase d'exploration professionnelle, je
+                m'attache à acquérir une connaissance approfondie et à rester au fait des évolutions
+                technologiques.<br><br> Par ailleurs, j'ai une expérience dans le travail avec HTML, CSS et
+                JavaScript. Récemment, j'ai consacré beaucoup de temps à la pratique de Python et j'ai réalisé
+                plusieurs projets dans ce langage.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Fondations académiques.</h4>
+                    <p>L'école primaire Khalid bin Al-Walid.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Baccalauréat obtenu en 2023</h4>
+                    <p>Lycée qualifiant Hawara</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Actuellement en licence de génie informatique.</h4>
+                    <p>La Faculté Polydisciplinaire de Taroudant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="Skills">
+        <h3>My Skills</h3>
+        <div class="skills">
+            <div class="skill">
+                <h4>HTML</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>CSS</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 55%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>JavaScript</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 65%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Python</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>C</h4>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 30%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="Projects">
+        <h3>My Projects</h3>
+        <div class="projects">
+            <div class="project-card">
+                <img src="project1.png" alt="Project 1">
+                <h4>ReadNoveles</h4>
+                <p>Web application for reading novels.</p>
+                <a href="https://yacine20elfadili.github.io/readnoveles/abcd/Login" target="_blank">Live Demo</a>
+            </div>
+            <div class="project-card">
+                <img src="project2.png" alt="Project 2">
+                <h4>My CV</h4>
+                <p>Online resume website.</p>
+                <a href="https://yacine20elfadili.github.io/mycv/cvindex.html" target="_blank">Live Demo</a>
+            </div>
+            <div class="project-card">
+                <img src="project3.png" alt="Project 3">
+                <h4>MyPortfolio</h4>
+                <p>Online Portfolio website.</p>
+                <a href="https://yacine20elfadili.github.io/mycv/cvindex.html" target="_blank">Live Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="Contact">
+        <h3>Contact Me</h3>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Mohamed Yacine Elfadili. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/yacine-elfadili-a5185b314/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Yacine20elfadili" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+    <!-- Script for Active Section Highlight -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+
+        // Toggle button click to show/hide navbar
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function () {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+
+        // Typewriter Effect
+        var typed = new Typed(".input", {
+            strings: ["Frontend Developer", "UX Designer", "Web Developer"],
+            typeSpeed: 80,
+            backSpeed: 40,
+            backDelay: 1000,
+            loop: true
+        });
+
+
+        // Active Link on Scroll
+        window.addEventListener("scroll", () => {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 50) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
