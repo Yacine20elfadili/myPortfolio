@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Yacine Elfadili - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
@@ -131,19 +130,19 @@
                 <img src="project1.png" alt="Project 1">
                 <h4>ReadNoveles</h4>
                 <p>Web application for reading novels.</p>
-                <a href="https://yacine20elfadili.github.io/readnoveles/abcd/Login" target="_blank">Live Demo</a>
+                <a href="https://yacine20elfadili.github.io/readnoveles/" target="_blank">Live Demo</a>
             </div>
             <div class="project-card">
                 <img src="project2.png" alt="Project 2">
                 <h4>My CV</h4>
                 <p>Online resume website.</p>
-                <a href="https://yacine20elfadili.github.io/mycv/cvindex.html" target="_blank">Live Demo</a>
+                <a href="https://yacine20elfadili.github.io/mycv/" target="_blank">Live Demo</a>
             </div>
             <div class="project-card">
                 <img src="project3.png" alt="Project 3">
                 <h4>MyPortfolio</h4>
                 <p>Online Portfolio website.</p>
-                <a href="https://yacine20elfadili.github.io/myPortfolio/face.html" target="_blank">Live Demo</a>
+                <a href="https://yacine20elfadili.github.io/myPortfolio/" target="_blank">Live Demo</a>
             </div>
         </div>
     </section>
@@ -174,51 +173,7 @@
         </div>
     </footer>
 
-    <!-- Script for Active Section Highlight -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-    <script>
-
-        // Toggle button click to show/hide navbar
-        var togglebtn = document.querySelector(".togglebtn");
-        var nav = document.querySelector(".navlinks");
-
-        togglebtn.addEventListener("click", function () {
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        });
-
-
-        // Typewriter Effect
-        var typed = new Typed(".input", {
-            strings: ["Frontend Developer", "UX Designer", "Web Developer"],
-            typeSpeed: 80,
-            backSpeed: 40,
-            backDelay: 1000,
-            loop: true
-        });
-
-
-        // Active Link on Scroll
-        window.addEventListener("scroll", () => {
-            const sections = document.querySelectorAll("section");
-            const navLinks = document.querySelectorAll(".nav-link");
-
-            let current = "";
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 50) {
-                    current = section.getAttribute("id");
-                }
-            });
-
-            navLinks.forEach((link) => {
-                link.classList.remove("active");
-                if (link.getAttribute("href").includes(current)) {
-                    link.classList.add("active");
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
