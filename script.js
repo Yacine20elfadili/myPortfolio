@@ -1,12 +1,3 @@
-// Toggle button click to show/hide navbar
-var togglebtn = document.querySelector(".togglebtn");
-var nav = document.querySelector(".navlinks");
-
-togglebtn.addEventListener("click", function () {
-    this.classList.toggle("click");
-    nav.classList.toggle("open");
-});
-
 
 // Typewriter Effect
 var typed = new Typed(".input", {
@@ -17,27 +8,6 @@ var typed = new Typed(".input", {
     loop: true
 });
 
-
-// Active Link on Scroll
-window.addEventListener("scroll", () => {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    let current = "";
-    sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 50) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
-            link.classList.add("active");
-        }
-    });
-});
 
 // Wait for DOM to fully load
 document.addEventListener('DOMContentLoaded', function () {
